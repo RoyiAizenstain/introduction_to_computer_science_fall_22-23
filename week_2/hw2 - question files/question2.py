@@ -8,6 +8,7 @@ def split_words(game_words):
         if game_words[letter] == "$":
             word_place += 1
             list_of_words.append("")
+
             continue
         list_of_words[word_place] += game_words[letter]
     return list_of_words
