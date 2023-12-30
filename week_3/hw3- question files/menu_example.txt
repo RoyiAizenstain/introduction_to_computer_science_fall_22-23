@@ -1,0 +1,158 @@
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: a
+Invalid choice. Please select a valid option.
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 6
+Invalid choice. Please select a valid option.
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: ?!
+Invalid choice. Please select a valid option.
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 1
+Write your query here: Play activities at home
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: 1
+Invalid choice. Please select a valid option.
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: a
+Invalid choice. Please select a valid option.
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: A
+1 : 0.195
+2 : 0.146
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: B
+The most relevant document is 1 with a score of 0.195
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: C
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 2
+Insert the document ID: 1
+The document ID 1 is already in corpus.
+Insert the document ID: 4
+Insert the text of the document: Kids playing a card game at home.
+Document 4 was successfully added!
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 3
+Insert the document ID: 5
+The document ID 5 is not in corpus.
+Insert the document ID: 4
+Insert a word: play
+TF-IDF of the word play in document 4 is: 0.083
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 3
+Insert the document ID: 1
+Insert a word: cats
+TF-IDF of the word cat in document 1 is: 0.333
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 3
+Insert the document ID: 2
+Insert a word: orange
+The word orange is not in corpus.
+Insert a word: kid
+TF-IDF of the word kid in document 2 is: 0.0
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 4
+Insert the document ID: 6
+The document ID 6 is not in corpus.
+Insert the document ID: 1
+Document 1 is successfully deleted.
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 1
+Write your query here: Play activities at home
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: A
+2 : 0.146
+4 : 0.434
+Choose the type of results you would like to retrieve:
+	(A) All relevant documents.
+	(B) The most relevant document.
+	(C) Back to the main menu.
+Your choice: C
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 3
+Insert the document ID: 1
+The document ID 1 is not in corpus.
+Insert the document ID: 2
+Insert a word: home
+TF-IDF of the word home in document 2 is: 0.0
+Choose an option from the menu:
+	(1) Insert a query.
+	(2) Add document to corpus.
+	(3) Calculate TF-IDF Score for a word in a document.
+	(4) Delete a document from the corpus.
+	(5) Exit.
+Your choice: 5

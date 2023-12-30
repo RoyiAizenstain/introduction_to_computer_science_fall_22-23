@@ -1,0 +1,64 @@
+# Example 1:
+>>> play_hangman("holiday$program$process$arrange$example")
+Welcome to Hangman Game!
+Enter number of attempts: >? 4
+The word has 7 letters. You have 4 attempts.
+_ _ _ _ _ _ _
+Guess a letter: >? g
+_ _ _ _ _ g _
+Guess a letter: >? p
+Wrong guess! Attempts remaining: 3
+_ _ _ _ _ g _
+Guess a letter: >? a
+a _ _ a _ g _
+Guess a letter: >? o
+Wrong guess! Attempts remaining: 2
+a _ _ a _ g _
+Guess a letter: >? r
+a r r a _ g _
+Guess a letter: >? n
+a r r a n g _
+Guess a letter: >? e
+Congratulations! You guessed the word: arrange
+
+# Example 2:
+>>> play_hangman("exam$program$question$floor$summer")
+Welcome to Hangman Game!
+Enter number of attempts: >? 2
+The word has 4 letters. You have 2 attempts.
+_ _ _ _
+Guess a letter: >? t
+Wrong guess! Attempts remaining: 1
+_ _ _ _
+Guess a letter: >? r
+Wrong guess! Attempts remaining: 0
+Sorry, you've run out of attempts. The word was: exam
+
+# Example 3:
+>>> play_hangman("fly$event$custom$arrange$game$floor$sky$range")
+Welcome to Hangman Game!
+Enter number of attempts: >? 5
+The word has 5 letters. You have 5 attempts.
+_ _ _ _ _
+Guess a letter: >? t
+Wrong guess! Attempts remaining: 4
+_ _ _ _ _
+Guess a letter: >? t
+You already guessed that letter.
+_ _ _ _ _
+Guess a letter: >? a
+_ a _ _ _
+Guess a letter: >? n
+_ a n _ _
+Guess a letter: >? n
+You already guessed that letter.
+_ a n _ _
+Guess a letter: >? f
+Wrong guess! Attempts remaining: 3
+_ a n _ _
+Guess a letter: >? r
+r a n _ _
+Guess a letter: >? g
+r a n g _
+Guess a letter: >? e
+Congratulations! You guessed the word: range
