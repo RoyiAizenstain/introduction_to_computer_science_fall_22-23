@@ -18,9 +18,6 @@ corpus = {1: "The cat played the piano",
 
 
 ####### Part A #########
-def royi():
-    print("")
-
 def remove_punctuation(text):
     pass
 
