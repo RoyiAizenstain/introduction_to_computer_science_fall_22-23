@@ -17,6 +17,8 @@ def generate_pascals_triangle(rows):
     return pascals_triangle
 
 
+# ************************ QUESTION 1.2 **************************
+### WRITE CODE HERE
 def print_pascals_triangle(triangle):
     """Takes in a pascals triangle, prints the pascals triangle"""
     triangle_rows = len(triangle)
@@ -33,5 +35,4 @@ def list_to_str(my_list):
         string += str(my_list[i]) + " "
     return string
 
-# ************************ QUESTION 1.2 **************************
-### WRITE CODE HERE
+print_pascals_triangle(generate_pascals_triangle(5))
