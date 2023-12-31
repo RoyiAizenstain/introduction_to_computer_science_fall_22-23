@@ -35,4 +35,5 @@ def list_to_str(my_list):
         string += str(my_list[i]) + " "
     return string
 
-print_pascals_triangle(generate_pascals_triangle(5))
+
+
