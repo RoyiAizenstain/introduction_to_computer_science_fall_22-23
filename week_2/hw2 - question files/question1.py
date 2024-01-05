@@ -25,7 +25,7 @@ def print_pascals_triangle(triangle):
     spaces_to_add = triangle_rows - 1
     for row in range(triangle_rows):
         print(spaces_to_add * " " + list_to_str(triangle[row]))
-        spaces_to_add -= 1;
+        spaces_to_add -= 1
 
 
 def list_to_str(my_list):
@@ -34,6 +34,5 @@ def list_to_str(my_list):
     for i in range(len(my_list)):
         string += str(my_list[i]) + " "
     return string
-
 
 
