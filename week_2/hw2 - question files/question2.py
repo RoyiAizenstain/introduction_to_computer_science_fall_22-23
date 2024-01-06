@@ -45,8 +45,13 @@ def is_exist(my_list, string):
 def board_format(board_list):
     """Takes list, returns a string format of the list"""
     board = ""
+    counter = 0
     for letter in board_list:
-        board += letter + " "
+        counter += 1
+        if counter < len(board_list):
+            board += letter + " "
+        else:
+            board += letter
     return board
 
 
@@ -54,15 +59,16 @@ def play_hangman(game_words):
     """Takes game words, returns hangman game"""
     secret_word = choose_secret_word(split_words(game_words))
     print("Welcome to Hangman Game!")
-    attempts = int(input("Enter number of attempts:"))
+    attempts = int(input("Enter number of attempts: "))
     print("The word has " + str(len(secret_word)) + " letters." + " You have " + str(attempts) + " attempts.")
     user_guesses = []
     current_board = ["_"] * len(secret_word)
     print(board_format(current_board))
     while attempts > 0:
-        guessed_letter = input("Guess a letter:")
+        guessed_letter = input("Guess a letter: ")
         if is_exist(user_guesses, guessed_letter):
             print("You already guessed that letter.")
+            print(board_format(current_board))
             continue
         if is_exist(secret_word, guessed_letter):
             current_board = get_guess_result(secret_word, guessed_letter, current_board)
@@ -78,4 +84,3 @@ def play_hangman(game_words):
                 break
             print(board_format(current_board))
         user_guesses.append(guessed_letter)
-

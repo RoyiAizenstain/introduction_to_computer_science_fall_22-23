@@ -22,17 +22,19 @@ def generate_pascals_triangle(rows):
 def print_pascals_triangle(triangle):
     """Takes in a pascals triangle, prints the pascals triangle"""
     triangle_rows = len(triangle)
-    spaces_to_add = triangle_rows - 1
+    len_of_last = len(list_to_str(triangle[triangle_rows - 1]))
     for row in range(triangle_rows):
-        print(spaces_to_add * " " + list_to_str(triangle[row]))
-        spaces_to_add -= 1
+        print(list_to_str(triangle[row]).center(len_of_last, " "))
 
 
 def list_to_str(my_list):
     """Takes in a list, return a string format of the list"""
     string = ""
+    counter = 0
     for i in range(len(my_list)):
-        string += str(my_list[i]) + " "
+        counter += 1
+        if i < len(my_list) - 1:
+            string += str(my_list[i]) + " "
+        else:
+            string += str(my_list[i])
     return string
-
-
