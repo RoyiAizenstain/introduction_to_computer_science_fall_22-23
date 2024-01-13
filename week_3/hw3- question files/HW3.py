@@ -11,35 +11,104 @@ stop_words = [
 punctuations = ['.', ',', ':', ';', '!', '?', '"', "'", '(', ')', '[', ']', '{', '}',
                 '-', '/', '\\', '&', '@', '#', '$', '%', '*', '_', '~']
 
-
 corpus = {1: "The cat played the piano",
           2: "5 cats are playing ball in the backyard!",
           3: "The grand piano is in the house"}
 
 
 ####### Part A #########
-def remove_punctuation(text):
-    pass
+def remove_punctuations(text):  # check if remove_punctuations or remove_punctuation
+    """takes a string, returns the string without punctuations from the punctuations list"""
+    text_without_punctuations = text
+    for letter in text:
+        if letter in punctuations:
+            text_without_punctuations = text_without_punctuations.replace(letter, " ")
+    return text_without_punctuations
 
 
 def remove_digits(text):
-    pass
+    """takes a string, returns the string without digits"""
+    text_without_digits = text
+    for letter in text:
+        if letter.isdigit():
+            text_without_digits = text_without_digits.replace(letter, " ")
+    return text_without_digits
 
 
 def remove_spaces(text):
-    pass
+    """takes a string, returns the string without a sequence of white spaces"""
+    format_text = ""
+    space_count = 0
+    for letter in text:
+        if letter == " " and space_count == 0:
+            format_text += letter
+            space_count += 1
+        elif letter == " ":
+            space_count += 1
+            continue
+        else:
+            space_count = 0
+            format_text += letter
+    return format_text
 
 
 def remove_stopwords(words_list):
-    pass
+    """takes a list of words, returns the list without words from """
+    format_list = words_list.copy()
+    for word in words_list:
+        if word in stop_words:
+            format_list.pop(format_list.index(word))
+    return format_list
 
 
-def stemming(words_list):
-    pass
+def remove_stopwords_inplace(words_list):
+    """takes a list of words, returns the list without words from """
+    counter = 0
+    for i in range(len(words_list)):
+        if words_list[counter] in stop_words:
+            words_list.pop(counter)
+            counter -= 1
+        counter += 1
+    return words_list
+
+
+def stem_word(word):
+    """takes a string that represents word, returns a string edited by question rules"""
+    if word[-3:] == "ies":
+        return word[:-3] + "y"
+    elif word[-4:] == "sses":
+        return word[:-4] + "ss"
+    elif word[-1:] == "s":
+        return word[:-1]
+    elif word[-2:] == "ed":
+        return word[:-2]
+    elif word[-3:] == "ing":
+        return word[:-3]
+    else:
+        return word
+
+
+def stemming(words_list):  # not working with eed
+    """takes a list of words, returns a list of edited words by their ends"""
+    format_word_list = []
+    for word in words_list:
+        format_word_list.append(stem_word(word))
+    return format_word_list
 
 
 def preprocessing(text):
-    pass
+    format_text = remove_punctuations(text)
+    format_text = remove_digits(format_text)
+    format_text = remove_spaces(format_text)
+    format_text = format_text.lower()
+    format_text = format_text.split(" ")
+    format_text = remove_stopwords(format_text)
+    format_text = stemming(format_text)
+    if "" in format_text:
+        format_text.remove("")
+    return format_text
+
+
 
 
 ###### Part B #######
@@ -71,7 +140,5 @@ def get_scores_of_relevance_docs(query, inverted_index, documents_data):
 ###### Part D #######
 def menu(corpus):
     pass
-        # choice = input('Choose an option from the menu:\n\t(1) Insert a query.\n\t(2) Add document to corpus.\n\t(3) Calculate TF-IDF Score for a word in a document.\n\t(4) Delete a document from the corpus.\n\t(5) Exit.\nYour choice: ')
-        # query_choice = input('Choose the type of results you would like to retrieve:\n\t(A) All relevant documents.\n\t(B) The most relevant document.\n\t(C) Back to the main menu.\nYour choice: ')
-
-
+    # choice = input('Choose an option from the menu:\n\t(1) Insert a query.\n\t(2) Add document to corpus.\n\t(3) Calculate TF-IDF Score for a word in a document.\n\t(4) Delete a document from the corpus.\n\t(5) Exit.\nYour choice: ')
+    # query_choice = input('Choose the type of results you would like to retrieve:\n\t(A) All relevant documents.\n\t(B) The most relevant document.\n\t(C) Back to the main menu.\nYour choice: ')
