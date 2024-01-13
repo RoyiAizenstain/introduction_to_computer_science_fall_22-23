@@ -97,6 +97,7 @@ def stemming(words_list):  # not working with eed
 
 
 def preprocessing(text):
+    """takes text, returns a list of format words"""
     format_text = remove_punctuations(text)
     format_text = remove_digits(format_text)
     format_text = remove_spaces(format_text)
@@ -104,16 +105,18 @@ def preprocessing(text):
     format_text = format_text.split(" ")
     format_text = remove_stopwords(format_text)
     format_text = stemming(format_text)
-    if "" in format_text:
+    while "" in format_text:
         format_text.remove("")
     return format_text
 
 
-
-
 ###### Part B #######
 def get_documents_data(corpus):
-    pass
+    """takes dictionary that represents corpus, returns a dictionary that represents documents data"""
+    documents_data = {}
+    for key, value in corpus.items():
+        documents_data[key] = len(preprocessing(value))
+    return documents_data
 
 
 def create_inverted_index(corpus):
