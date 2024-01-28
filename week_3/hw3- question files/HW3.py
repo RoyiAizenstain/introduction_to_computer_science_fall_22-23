@@ -53,7 +53,7 @@ def remove_spaces(text):
 
 
 def remove_stopwords(words_list):
-    """takes a list of words, returns the list without words from """
+    """takes a list of words, returns the list without words from stop_words"""
     format_list = words_list.copy()
     for word in words_list:
         if word in stop_words:
@@ -62,7 +62,7 @@ def remove_stopwords(words_list):
 
 
 def remove_stopwords_inplace(words_list):
-    """takes a list of words, returns the list without words from """
+    """takes a list of words, returns the list without words from stop_words"""
     counter = 0
     for i in range(len(words_list)):
         if words_list[counter] in stop_words:
@@ -120,11 +120,33 @@ def get_documents_data(corpus):
 
 
 def create_inverted_index(corpus):
-    pass
+    """takes dictionary that represents corpus, returns a dictionary that represents inverted index"""
+    inverted_index = {}
+    for text_id, text in corpus.items():
+        text_words = preprocessing(text)
+        for word in text_words:
+            if word not in inverted_index.keys():
+                inverted_index[word] = {}
+                inverted_index[word][text_id] = 1
+            else:
+                if text_id not in inverted_index[word].keys():
+                    inverted_index[word][text_id] = 1
+                else:
+                    inverted_index[word][text_id] += 1
+    return inverted_index
 
 
 def add_to_data(inverted_index, documents_data, doc_id, text):
-    pass
+    new_doc = {doc_id: text}
+    new_doc_inverted_index = create_inverted_index(new_doc)
+    new_doc_data = get_documents_data(new_doc)
+    inverted_index.update(new_doc_inverted_index)  ##not working
+    documents_data.update(new_doc_data)
+    print(documents_data)
+    return inverted_index, documents_data
+
+
+add_to_data(create_inverted_index(corpus), get_documents_data(corpus), 4, "dog dog cat ")
 
 
 def remove_from_data(inverted_index, documents_data, doc_id):
