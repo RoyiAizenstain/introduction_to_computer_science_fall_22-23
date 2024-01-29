@@ -137,20 +137,29 @@ def create_inverted_index(corpus):
 
 
 def add_to_data(inverted_index, documents_data, doc_id, text):
+    """takes inverted_index, documents_data, doc_id and text, returns inverted_index, documents_data with new data"""
     new_doc = {doc_id: text}
     new_doc_inverted_index = create_inverted_index(new_doc)
     new_doc_data = get_documents_data(new_doc)
-    inverted_index.update(new_doc_inverted_index)  ##not working
+    for word, value in new_doc_inverted_index.items():
+        if word not in inverted_index.keys():
+            inverted_index[word] = {}
+            inverted_index[word].update(new_doc_inverted_index[word])
+        else:
+            inverted_index[word].update(new_doc_inverted_index[word])
     documents_data.update(new_doc_data)
-    print(documents_data)
     return inverted_index, documents_data
 
 
-add_to_data(create_inverted_index(corpus), get_documents_data(corpus), 4, "dog dog cat ")
-
-
 def remove_from_data(inverted_index, documents_data, doc_id):
-    pass
+    """takes inverted_index, documents_data, doc_id and text, returns inverted_index, documents_data without doc data"""
+    documents_data.pop(doc_id)
+    for word, value in list(inverted_index.items()):
+        if doc_id in value:
+            inverted_index[word].pop(doc_id)
+        if not value:
+            inverted_index.pop(word)
+    return inverted_index, documents_data
 
 
 ###### Part C #######
