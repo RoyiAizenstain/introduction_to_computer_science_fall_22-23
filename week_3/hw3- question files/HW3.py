@@ -88,7 +88,7 @@ def stem_word(word):
         return word
 
 
-def stemming(words_list):  # not working with eed
+def stemming(words_list):
     """takes a list of words, returns a list of edited words by their ends"""
     format_word_list = []
     for word in words_list:
@@ -164,11 +164,32 @@ def remove_from_data(inverted_index, documents_data, doc_id):
 
 ###### Part C #######
 def calculate_tf_idf(word, doc_id, inverted_index, documents_data):
-    pass
+    """takes word, doc_id, inverted_index, documents_data, returns tf_idf"""
+    number_of_documents = len(documents_data)
+    number_of_documents_with_word = len(inverted_index[word])
+    number_of_word_in_document = 0
+    total_terms_in_doc = documents_data[doc_id]
+    if doc_id in inverted_index[word]:
+        number_of_word_in_document = inverted_index[word][doc_id]
+    tf_const = number_of_word_in_document / total_terms_in_doc
+    idf_const = math.log2(number_of_documents / number_of_documents_with_word)
+    return round(tf_const * idf_const, 3)
+
 
 
 def get_scores_of_relevance_docs(query, inverted_index, documents_data):
-    pass
+    """takes query, inverted_index, documents_data returns total tf_idf per doc"""
+    scores_of_relevance_docs = {}
+    for doc_id in documents_data.keys():
+        total_tf_idf_doc = 0
+        for word in query:
+            if word not in inverted_index.keys():
+                continue
+            total_tf_idf_doc += calculate_tf_idf(word, doc_id, inverted_index, documents_data)
+        if total_tf_idf_doc != 0:
+            scores_of_relevance_docs[doc_id] = round(total_tf_idf_doc, 3)
+    return scores_of_relevance_docs
+
 
 
 ###### Part D #######
