@@ -17,7 +17,7 @@ corpus = {1: "The cat played the piano",
 
 
 ####### Part A #########
-def remove_punctuations(text):  # check if remove_punctuations or remove_punctuation
+def remove_punctuation(text):  # check if remove_punctuations or remove_punctuation
     """takes a string, returns the string without punctuations from the punctuations list"""
     text_without_punctuations = text
     for letter in text:
@@ -98,7 +98,7 @@ def stemming(words_list):
 
 def preprocessing(text):
     """takes text, returns a list of format words"""
-    format_text = remove_punctuations(text)
+    format_text = remove_punctuation(text)
     format_text = remove_digits(format_text)
     format_text = remove_spaces(format_text)
     format_text = format_text.lower()
@@ -176,7 +176,6 @@ def calculate_tf_idf(word, doc_id, inverted_index, documents_data):
     return round(tf_const * idf_const, 3)
 
 
-
 def get_scores_of_relevance_docs(query, inverted_index, documents_data):
     """takes query, inverted_index, documents_data returns total tf_idf per doc"""
     scores_of_relevance_docs = {}
@@ -191,9 +190,103 @@ def get_scores_of_relevance_docs(query, inverted_index, documents_data):
     return scores_of_relevance_docs
 
 
-
 ###### Part D #######
 def menu(corpus):
-    pass
-    # choice = input('Choose an option from the menu:\n\t(1) Insert a query.\n\t(2) Add document to corpus.\n\t(3) Calculate TF-IDF Score for a word in a document.\n\t(4) Delete a document from the corpus.\n\t(5) Exit.\nYour choice: ')
-    # query_choice = input('Choose the type of results you would like to retrieve:\n\t(A) All relevant documents.\n\t(B) The most relevant document.\n\t(C) Back to the main menu.\nYour choice: ')
+    """menu"""
+    documents_data = get_documents_data(corpus)
+    inverted_index = create_inverted_index(corpus)
+    choice = 0
+    while choice != "5":
+        choice = input(
+            'Choose an option from the menu:\n\t(1) Insert a query.\n\t(2) Add document to corpus.\n\t(3) Calculate TF-IDF Score for a word in a document.\n\t(4) Delete a document from the corpus.\n\t(5) Exit.\nYour choice: ')
+        if choice == "1":
+            part_1(documents_data, inverted_index)
+        elif choice == "2":
+            part_2(documents_data, inverted_index)
+        elif choice == "3":
+            part_3(documents_data, inverted_index)
+        elif choice == "4":
+            part_4(documents_data, inverted_index)
+        elif choice == "5":
+            continue
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+
+
+def part_1(documents_data, inverted_index):
+    """part 1"""
+    query = input('Write your query here: ')
+    preprocessing_query = preprocessing(query)
+    while True:
+        query_choice = input(
+            'Choose the type of results you would like to retrieve:\n\t(A) All relevant documents.\n\t(B) The most relevant document.\n\t(C) Back to the main menu.\nYour choice: ')
+        scores_of_relevance_docs = get_scores_of_relevance_docs(preprocessing_query, inverted_index, documents_data)
+        sorted_scores_of_relevance_docs = dict(sorted(scores_of_relevance_docs.items()))
+        if query_choice == "A":
+            for key, value in sorted_scores_of_relevance_docs.items():
+                print(str(key) + " : " + str(value))
+        elif query_choice == "B":
+            highest_score_doc = 0
+            highest_score = 0
+            for key, value in sorted_scores_of_relevance_docs.items():
+                if value > highest_score:
+                    highest_score = value
+                    highest_score_doc = key
+            print("The most relevant document is " + str(highest_score_doc) + " with a score of " + str(
+                highest_score))
+        elif query_choice == "C":
+            return
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+
+def part_2(documents_data, inverted_index):
+    """part 2"""
+    while True:
+        new_doc_id = int(input("Insert the document ID: "))
+        if new_doc_id in documents_data:
+            print("The document ID " + str(new_doc_id) + " is already in corpus.")
+            continue
+        break
+    new_doc_text = input("Insert the text of the document: ")
+    add_to_data(inverted_index, documents_data, new_doc_id, new_doc_text)
+    print("Document " + str(new_doc_id) + " was successfully added!")
+
+
+def part_3(documents_data, inverted_index):
+    """part 3"""
+    while True:
+        doc_id = int(input("Insert the document ID: "))
+        if doc_id not in documents_data.keys():
+            print("The document ID " + str(doc_id) + " is not in corpus.")
+            continue
+        break
+    while True:
+        word = input("Insert a word: ")
+        word = stem_word(word)
+        if word not in inverted_index.keys():
+            print("The word " + word + " is not in corpus.")
+            continue
+        break
+    print("TF-IDF of the word " + word + " in document " + str(doc_id) + " is: " + str(calculate_tf_idf(word, doc_id,
+                                                                                                        inverted_index,
+                                                                                                        documents_data)))
+
+
+def part_4(documents_data, inverted_index):
+    """part 5"""
+    while True:
+        doc_id = int(input("Insert the document ID: "))
+        if doc_id not in documents_data.keys():
+            print("The document ID " + str(doc_id) + " is not in corpus.")
+            continue
+        break
+    remove_from_data(inverted_index, documents_data, doc_id)
+    print("Document " + str(doc_id) + " is successfully deleted.")
+
+
+
+
+# choice = input('Choose an option from the menu:\n\t(1) Insert a query.\n\t(2) Add document to corpus.\n\t(3) Calculate TF-IDF Score for a word in a document.\n\t(4) Delete a document from the corpus.\n\t(5) Exit.\nYour choice: ')
+# query_choice = input('Choose the type of results you would like to retrieve:\n\t(A) All relevant documents.\n\t(B) The most relevant document.\n\t(C) Back to the main menu.\nYour choice: ')
