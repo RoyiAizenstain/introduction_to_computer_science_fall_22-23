@@ -31,7 +31,7 @@ def remove_digits(text):
     text_without_digits = text
     for letter in text:
         if letter.isdigit():
-            text_without_digits = text_without_digits.replace(letter, " ")
+            text_without_digits = text_without_digits.replace(letter, "")
     return text_without_digits
 
 
@@ -56,7 +56,7 @@ def remove_stopwords(words_list):
     """takes a list of words, returns the list without words from stop_words"""
     format_list = words_list.copy()
     for word in words_list:
-        if word in stop_words:
+        if word.lower() in stop_words:
             format_list.pop(format_list.index(word))
     return format_list
 
@@ -65,7 +65,7 @@ def remove_stopwords_inplace(words_list):
     """takes a list of words, returns the list without words from stop_words"""
     counter = 0
     for i in range(len(words_list)):
-        if words_list[counter] in stop_words:
+        if words_list[counter].lower() in stop_words:
             words_list.pop(counter)
             counter -= 1
         counter += 1
