@@ -25,7 +25,17 @@ def test_q1():
 
 
 def test_q2():
-    pass
+    output_true1 = q2.estate_homogeneity([300, [100, [50, 50], [25, 25, 25, 25]]], 600)
+    output_true2 = q2.estate_homogeneity([[50, 50], 100], 200)
+    output_false1 = q2.estate_homogeneity([[50, 50], 100, [50, [10, 20, 20]]], 300)
+    output_false2 = q2.estate_homogeneity([[50, 50], 100, [50, [20, 10, 20]]], 300)
+    all_true = output_true1 and output_true2
+    all_false = output_false1 or output_false2
+    if all_true and not all_false:
+        print("q2-all tests passed")
+    else:
+        print("q2-not all tests passed")
+
 
 
 def test_q3():
