@@ -14,5 +14,4 @@ def rec_estate_homogeneity(divisions, total_area, counter):
     rec_estate_homogeneity(divisions[counter], total_area / len_of_list, counter)
     rec_estate_homogeneity(divisions, total_area / len_of_list, counter+1)
 
-output_true1 = estate_homogeneity([300, [100, [50, 50], [25, 25, 25, 25]]], 600)
-print(output_true1)
+
