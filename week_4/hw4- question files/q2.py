@@ -1,7 +1,7 @@
 def estate_homogeneity(divisions, total_area):
     # Your Code Here
     return rec_estate_homogeneity(divisions, total_area, 0)
-    pass
+
 
 
 def rec_estate_homogeneity(divisions, total_area, counter):
@@ -16,7 +16,6 @@ def rec_estate_homogeneity(divisions, total_area, counter):
     return rec_estate_homogeneity(divisions[counter], total_area / len(divisions), 0) and rec_estate_homogeneity(
         divisions, total_area, counter + 1)
 
-    pass
 
 
 def rec_all_numbers(mylist, counter):
