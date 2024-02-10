@@ -42,4 +42,4 @@ def rec_all_equal(mylist, total_area, counter):
         return rec_all_equal(mylist, total_area, counter)
 
 
-print(estate_homogeneity([100,100,100], 300))
+
