@@ -1,8 +1,4 @@
-def word_reconstruction(target_word: object, char_list: object) -> object:
-    """
-
-    :rtype: object
-    """
+def word_reconstruction(target_word, char_list):
     # Your Code Here
     if target_word == "":
         return True

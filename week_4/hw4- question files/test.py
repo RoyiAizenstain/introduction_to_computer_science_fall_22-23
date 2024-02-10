@@ -42,11 +42,52 @@ def test_q2():
 
 
 def test_q3():
+    print("q3-need to build the tests")
     pass
 
 
 def test_q4():
+    test_colcat()
+    test_vertical_split()
     pass
+
+
+def test_colcat():
+    mat_1 = [[0, 1], [2, 3]]
+    mat_2 = [[6], [7]]
+    colcat_1 = q4.colcat(mat_2, mat_1)
+    output_true1 = colcat_1 == [[6, 0, 1], [7, 2, 3]]
+    output_false1 = colcat_1 == [[7, 2, 3], [6, 0, 1]]
+    colcat_mat2 = q4.colcat(mat_1, mat_1)
+    output_true2 = colcat_mat2 == [[0, 1, 0, 1], [2, 3, 2, 3]]
+    output_false2 = colcat_mat2 == [[0, 1, 0, 1], [2, 3, 3, 3]]
+    colcat_mat3 = q4.colcat([[1, 2]], [[-9, 6]])
+    output_true3 = colcat_mat3 == [[1, 2, -9, 6]]
+    output_false3 = colcat_mat3 == [1, 2, -9, 6]
+    all_true = output_true1 and output_true2 and output_true3
+    all_false = not (output_false1 and output_false2 and output_false3)
+    if all_true and all_false:
+        print("q4- part a -all tests passed")
+    else:
+        print("q4- part a -not all tests passed")
+
+
+def test_vertical_split():
+    test_1 = False
+    in_mat = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16]
+    ]
+    output = q4.vertical_split(in_mat)
+    if isinstance(output, tuple):
+        output_true1 = output[0] == [[1, 2], [5, 6], [9, 10], [13, 14]] and output[1] == [[3, 4], [7, 8], [11, 12],[15, 16]]
+        if output_true1:
+            print("q4- part b -the test passed ")
+    else:
+        print("q4- part b -the test did not pass ")
+
 
 
 def test_all():
