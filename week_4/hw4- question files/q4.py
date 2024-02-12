@@ -4,9 +4,20 @@ def colcat(mat_a, mat_b):
         return [mat_a[0] + mat_b[0]]
     return colcat([mat_a[0]], [mat_b[0]]) + colcat(mat_a[1:], mat_b[1:])
 
+
 def vertical_split(input_mat):
     # Your Code Here
-    return
+    if not input_mat:
+        return ([], [])
+    n = len(input_mat[0])
+    p = n // 2
+    mat = input_mat.pop()
+    tuple = vertical_split(input_mat)
+    tuple[0].append(mat[0:p])
+    tuple[1].append(mat[p:])
+    return (tuple[0], tuple[1])
+
+
 
 
 def rotate_mat_rec(input_mat):

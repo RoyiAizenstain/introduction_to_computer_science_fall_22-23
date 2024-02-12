@@ -42,8 +42,17 @@ def test_q2():
 
 
 def test_q3():
-    print("q3-need to build the tests")
-    pass
+    output_true1 = q3.merge_zigzag([1, 3, 5, 23, 11], [2, 0, 6, 17, 18]) == [2, 0, 6, 1, 17, 3, 18, 5, 23, 11]
+    output_true2 = q3.merge_zigzag([15, 10, 5, 3], [2, 11, 13, 14]) == [10, 2, 11, 5, 13, 3, 14]
+    output_true3 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [11, 2, 9]
+    output_false1 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [2, 2, 9]
+    all_true = output_true1 and output_true2 and output_true3
+    all_false = not (output_false1 or False)
+    if all_true and all_false:
+        print("q3-all tests passed")
+    else:
+        print("q3-not all tests passed")
+
 
 
 def test_q4():
@@ -73,21 +82,23 @@ def test_colcat():
 
 
 def test_vertical_split():
-    test_1 = False
+    all_tests_passed = False
     in_mat = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-        [13, 14, 15, 16]
+        [1, 2, 1, 3, 4],
+        [5, 6, 1, 7, 8],
+        [9, 10, 1, 11, 12],
+        [13, 14, 1, 15, 16]
     ]
     output = q4.vertical_split(in_mat)
     if isinstance(output, tuple):
-        output_true1 = output[0] == [[1, 2], [5, 6], [9, 10], [13, 14]] and output[1] == [[3, 4], [7, 8], [11, 12],[15, 16]]
+        output_true1 = output[0] == [[1, 2], [5, 6], [9, 10], [13, 14]] and output[1] == [[1, 3, 4], [1, 7, 8],
+                                                                                          [1, 11, 12], [1, 15, 16]]
         if output_true1:
-            print("q4- part b -the test passed ")
+            all_tests_passed = True
+    if all_tests_passed:
+        print("q4- part b -the test passed ")
     else:
         print("q4- part b -the test did not pass ")
-
 
 
 def test_all():
