@@ -46,12 +46,13 @@ def test_q3():
     output_true2 = q3.merge_zigzag([15, 10, 5, 3], [2, 11, 13, 14]) == [10, 2, 11, 5, 13, 3, 14]
     output_true3 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [11, 2, 9]
     output_false1 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [2, 2, 9]
+    output_false2 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [2, 10, 10]
     all_true = output_true1 and output_true2 and output_true3
-    all_false = not (output_false1 or False)
+    all_false = not (output_false1 or  output_false2)
     if all_true and all_false:
         print("q3-all tests passed")
     else:
-        print("q3-not all tests passed")
+        print("q3-not all tests passed")s
 
 
 
