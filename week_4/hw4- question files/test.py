@@ -52,7 +52,7 @@ def test_q3():
     if all_true and all_false:
         print("q3-all tests passed")
     else:
-        print("q3-not all tests passed")s
+        print("q3-not all tests passed")
 
 
 
