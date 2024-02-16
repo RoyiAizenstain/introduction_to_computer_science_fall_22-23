@@ -42,18 +42,20 @@ def test_q2():
 
 
 def test_q3():
+    list_1 = [10, 11, 2]
+    list_2 = [12, 6, 9]
     output_true1 = q3.merge_zigzag([1, 3, 5, 23, 11], [2, 0, 6, 17, 18]) == [2, 0, 6, 1, 17, 3, 18, 5, 23, 11]
     output_true2 = q3.merge_zigzag([15, 10, 5, 3], [2, 11, 13, 14]) == [10, 2, 11, 5, 13, 3, 14]
     output_true3 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [11, 2, 9]
-    output_false1 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [2, 2, 9]
+    output_false1 = q3.merge_zigzag(list_1, list_2) == [2, 2, 9]
     output_false2 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [2, 10, 10]
+    output_false3 = q3.merge_zigzag([10, 11, 2], [12, 6, 9]) == [10, 6]
     all_true = output_true1 and output_true2 and output_true3
-    all_false = not (output_false1 or  output_false2)
+    all_false = not (output_false1 or output_false2)
     if all_true and all_false:
         print("q3-all tests passed")
     else:
         print("q3-not all tests passed")
-
 
 
 def test_q4():
