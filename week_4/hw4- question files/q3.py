@@ -54,4 +54,3 @@ def merge_zigzag(list1, list2, merge_list=[]):
     return longest_list(all_options)
 
 
-print(merge_zigzag([3], [2]))
