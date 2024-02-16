@@ -1,10 +1,22 @@
 def estate_homogeneity(divisions, total_area):
     # Your Code Here
+    """
+
+    :param divisions:
+    :param total_area:
+    :return: bool- if the estate is homogeneity
+    """
     return rec_estate_homogeneity(divisions, total_area, 0)
 
 
-
 def rec_estate_homogeneity(divisions, total_area, counter):
+    """
+
+        :param divisions:
+        :param total_area:
+        :param counter
+        :return: bool- if the estate is homogeneity
+        """
     if isinstance(divisions, int):
         divisions = [divisions]
     if not divisions:
@@ -17,8 +29,13 @@ def rec_estate_homogeneity(divisions, total_area, counter):
         divisions, total_area, counter + 1)
 
 
-
 def rec_all_numbers(mylist, counter):
+    """
+
+    :param mylist:
+    :param counter:
+    :return: bool-if all in list are numbers
+    """
     length = len(mylist)
     if counter == length:
         return True
@@ -30,6 +47,13 @@ def rec_all_numbers(mylist, counter):
 
 
 def rec_all_equal(mylist, total_area, counter):
+    """
+
+    :param mylist:
+    :param total_area:
+    :param counter:
+    :return: bool- if all are equal
+    """
     length = len(mylist)
     area_each = total_area / length
     if counter == length:
@@ -39,6 +63,3 @@ def rec_all_equal(mylist, total_area, counter):
     if counter < length:
         counter += 1
         return rec_all_equal(mylist, total_area, counter)
-
-
-

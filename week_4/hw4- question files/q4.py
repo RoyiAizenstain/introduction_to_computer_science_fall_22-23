@@ -1,4 +1,10 @@
 def colcat(mat_a, mat_b):
+    """
+
+    :param mat_a:
+    :param mat_b:
+    :return: the combination of them
+    """
     # Your Code Here
     if len(mat_a) == 1 and len(mat_b) == 1:
         return [mat_a[0] + mat_b[0]]
@@ -7,6 +13,11 @@ def colcat(mat_a, mat_b):
 
 def vertical_split(input_mat):
     # Your Code Here
+    """
+
+    :param input_mat:
+    :return: vertical split of input_mat
+    """
     if not input_mat:
         return ([], [])
     n = len(input_mat[0])

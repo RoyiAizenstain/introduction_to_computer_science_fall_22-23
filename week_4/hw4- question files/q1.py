@@ -1,4 +1,10 @@
 def word_reconstruction(target_word, char_list):
+    """
+
+    :param target_word:
+    :param char_list:
+    :return: True if can bulid word from char list.
+    """
     # Your Code Here
     if target_word == "":
         return True
