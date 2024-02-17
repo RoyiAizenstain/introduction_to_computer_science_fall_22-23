@@ -1,0 +1,158 @@
+The aquarium, sized 25/40 and currently in step 0, contains the following animals:
+The ocypode myocypode is 118 years old and has 10 food.
+The shrimp myshrimp is 15 years old and has 10 food.
+The scalar myscalar is 17 years old and has 10 food.
+The molly mymolly is 13 years old and has 10 food.
+
+|                                                                             |
+|                                                                             |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|   * * * *     *                                                             |
+| * * * * * * * *                                                             |
+|   * * * *     *                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                             * * * * * *     |
+|                                                                     * * *   |
+|                                                                 * * * * * * |
+|                                                                     * * *   |
+|                                                             * * * * * *     |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                       *       *                             |
+|         *   *                           * * *                               |
+| * * * * * *                         * * * * * * *                           |
+|     *   *                           *           *                           |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+The aquarium, sized 25/40 and currently in step 8, contains the following animals:
+The ocypode myocypode is 118 years old and has 10 food.
+The shrimp myshrimp is 15 years old and has 10 food.
+The scalar myscalar is 17 years old and has 10 food.
+The molly mymolly is 13 years old and has 10 food.
+
+|                                                                             |
+|                                                                             |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                 *     * * * *                                               |
+|                 * * * * * * * *                 * * * * * *                 |
+|                 *     * * * *                 * * *                         |
+|                                             * * * * * *                     |
+|                                               * * *                         |
+|                                                 * * * * * *                 |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                   *       *                                 |
+|     *   *                           * * *                                   |
+|       * * * * * *               * * * * * * *                               |
+|         *   *                   *           *                               |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+The aquarium, sized 25/40 and currently in step 18, contains the following animals:
+The ocypode myocypode is 119 years old and has 9 food.
+The shrimp myshrimp is 16 years old and has 9 food.
+The scalar myscalar is 18 years old and has 9 food.
+The molly mymolly is 14 years old and has 9 food.
+
+|                                                                             |
+|                                                                             |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                             |
+|                             * * * * * *                                     |
+|                           * * *                                             |
+|                         * * * * * *                                         |
+|                           * * *                                             |
+|                             * * * * * *                                     |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                     *     * * * *                           |
+|                                     * * * * * * * *                         |
+|                                     *     * * * *                           |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                       *       *             |
+|                         *   *                           * * *               |
+|                 * * * * * *                         * * * * * * *           |
+|                     *   *                           *           *           |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+myocypode died in a good health.
+The aquarium, sized 25/40 and currently in step 28, contains the following animals:
+The shrimp myshrimp is 17 years old and has 8 food.
+The scalar myscalar is 19 years old and has 8 food.
+The molly mymolly is 15 years old and has 8 food.
+
+|                                                                             |
+|                                                                             |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                         *     * * * *       |
+|                                                         * * * * * * * *     |
+|                                                         *     * * * *       |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|         * * * * * *                                                         |
+|       * * *                                                                 |
+|     * * * * * *                                                             |
+|       * * *                                                                 |
+|         * * * * * *                                                         |
+|                                                                             |
+|                                                                             |
+|                                             *   *                           |
+|                                     * * * * * *                             |
+|                                         *   *                               |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+myshrimp died at the age of 25 years because it ran out of food.
+mymolly died at the age of 23 years because it ran out of food.
+myscalar died at the age of 27 years because it ran out of food.
+The aquarium, sized 25/40 and currently in step 128, contains the following animals:
+
+|                                                                             |
+|                                                                             |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /

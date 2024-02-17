@@ -1,0 +1,759 @@
+Welcome to "The OOP Aquarium"
+The width of the aquarium (Minimum 40): 45
+The height of the aquarium (Minimum 25): 27
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 1
+Please select:
+1. Scalar
+2. Molly
+3. Ocypode
+4. Shrimp
+What animal do you want to put in the aquarium? 1
+Please enter a name: scalar1
+Please enter age: 150
+Please enter age: 12
+Please enter an X axis location (1 - 44): 12
+Please enter an Y axis location (3 - 26): 26
+Please enter horizontal direction (0 for Left, 1 for Right): 1
+Please enter vertical direction  (0 for Down, 1 for Up): 1
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                       * * * * * *                                                     |
+|                               * * *                                                   |
+|                           * * * * * *                                                 |
+|                               * * *                                                   |
+|                       * * * * * *                                                     |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 2
+The aquarium, sized 27/45 and currently in step 0, contains the following animals:
+The scalar scalar1 is 12 years old and has 10 food.
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 4
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                         * * * * * *                                                   |
+|                                 * * *                                                 |
+|                             * * * * * *                                               |
+|                                 * * *                                                 |
+|                         * * * * * *                                                   |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 5
+How many steps do you want to take? 100
+scalar1 died at the age of 22 years because it ran out of food.
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 1
+Please select:
+1. Scalar
+2. Molly
+3. Ocypode
+4. Shrimp
+What animal do you want to put in the aquarium? 4
+Please enter a name: shrimp1
+Please enter age: 45
+Please enter an X axis location (1 - 44): 1
+Please enter horizontal direction (0 for Left, 1 for Right): 0
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+| *   *                                                                                 |
+|   * * * * * *                                                                         |
+|     *   *                                                                             |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 1
+Please select:
+1. Scalar
+2. Molly
+3. Ocypode
+4. Shrimp
+What animal do you want to put in the aquarium? 2
+Please enter a name: molly1
+Please enter age: 78
+Please enter an X axis location (1 - 44): 34
+Please enter an Y axis location (3 - 26): 23
+Please enter horizontal direction (0 for Left, 1 for Right): 1
+Please enter vertical direction  (0 for Down, 1 for Up): 0
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                   *     * * * *       |
+|                                                                   * * * * * * * *     |
+|                                                                   *     * * * *       |
+|                                                                                       |
+| *   *                                                                                 |
+|   * * * * * *                                                                         |
+|     *   *                                                                             |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 3
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 2
+The aquarium, sized 27/45 and currently in step 101, contains the following animals:
+The shrimp shrimp1 is 45 years old and has 20 food.
+The molly molly1 is 78 years old and has 20 food.
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 1
+Please select:
+1. Scalar
+2. Molly
+3. Ocypode
+4. Shrimp
+What animal do you want to put in the aquarium? 2
+Please enter a name: molly2
+Please enter age: 33
+Please enter an X axis location (1 - 44): 34
+Please enter an Y axis location (3 - 26): 23
+Please enter horizontal direction (0 for Left, 1 for Right): 0
+Please enter vertical direction  (0 for Down, 1 for Up): 1
+The place is not available! Please try again later.
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                   *     * * * *       |
+|                                                                   * * * * * * * *     |
+|                                                                   *     * * * *       |
+|                                                                                       |
+| *   *                                                                                 |
+|   * * * * * *                                                                         |
+|     *   *                                                                             |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 1
+Please select:
+1. Scalar
+2. Molly
+3. Ocypode
+4. Shrimp
+What animal do you want to put in the aquarium? 1
+Please enter a name: scalar2
+Please enter age: 45
+Please enter an X axis location (1 - 44): 22
+Please enter an Y axis location (3 - 26): 43
+Please enter an Y axis location (3 - 26): 26
+Please enter horizontal direction (0 for Left, 1 for Right): 1
+Please enter vertical direction  (0 for Down, 1 for Up): 1
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                           * * * * * *                                 |
+|                                                   * * *                               |
+|                                               * * * * * *         *     * * * *       |
+|                                                   * * *           * * * * * * * *     |
+|                                           * * * * * *             *     * * * *       |
+|                                                                                       |
+| *   *                                                                                 |
+|   * * * * * *                                                                         |
+|     *   *                                                                             |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 5
+How many steps do you want to take? 23
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                               * * * *     *                                           |
+|                             * * * * * * * *                                           |
+|                               * * * *     *             * * * * * *                   |
+|                                                       * * *                           |
+|                                                     * * * * * *                       |
+|                                                       * * *                           |
+|                                                         * * * * * *                   |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                       *   *                           |
+|                                               * * * * * *                             |
+|                                                   *   *                               |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 2
+The aquarium, sized 27/45 and currently in step 124, contains the following animals:
+The shrimp shrimp1 is 47 years old and has 18 food.
+The molly molly1 is 80 years old and has 18 food.
+The scalar scalar2 is 47 years old and has 8 food.
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 4
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                             * * * *     *                                             |
+|                           * * * * * * * *                                             |
+|                             * * * *     *             * * * * * *                     |
+|                                                     * * *                             |
+|                                                   * * * * * *                         |
+|                                                     * * *                             |
+|                                                       * * * * * *                     |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                         *   *                         |
+|                                                 * * * * * *                           |
+|                                                     *   *                             |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 4
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                           * * * *     *                                               |
+|                         * * * * * * * *                                               |
+|                           * * * *     *             * * * * * *                       |
+|                                                   * * *                               |
+|                                                 * * * * * *                           |
+|                                                   * * *                               |
+|                                                     * * * * * *                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                           *   *                       |
+|                                                   * * * * * *                         |
+|                                                       *   *                           |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 4
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                         * * * *     *                                                 |
+|                       * * * * * * * *                                                 |
+|                         * * * *     *             * * * * * *                         |
+|                                                 * * *                                 |
+|                                               * * * * * *                             |
+|                                                 * * *                                 |
+|                                                   * * * * * *                         |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                             *   *                     |
+|                                                     * * * * * *                       |
+|                                                         *   *                         |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 5
+How many steps do you want to take? 50
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                 * * * *     *         |
+|                                                               * * * * * * * *         |
+|                                                       * * * * * * * * *     *         |
+|                                                               * * *                   |
+|                                                           * * * * * *                 |
+|                                                               * * *                   |
+|                                                       * * * * * *                     |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                 *   *                                                                 |
+|         * * * * * *                                                                   |
+|             *   *                                                                     |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 4
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                               * * * *     *           |
+|                                                             * * * * * * * *           |
+|                                                               * * * *     *           |
+|                                                                                       |
+|                                                         * * * * * *                   |
+|                                                                 * * *                 |
+|                                                             * * * * * *               |
+|                                                                 * * *                 |
+|                                                         * * * * * *                   |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                   *   *                                                               |
+|           * * * * * *                                                                 |
+|               *   *                                                                   |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 2
+The aquarium, sized 27/45 and currently in step 178, contains the following animals:
+The shrimp shrimp1 is 52 years old and has 13 food.
+The molly molly1 is 85 years old and has 13 food.
+The scalar scalar2 is 52 years old and has 3 food.
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 1
+Please select:
+1. Scalar
+2. Molly
+3. Ocypode
+4. Shrimp
+What animal do you want to put in the aquarium? 3
+Please enter a name: ocypode1
+Please enter age: 22
+Please enter an X axis location (1 - 44): 35
+Please enter horizontal direction (0 for Left, 1 for Right): 1
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                               * * * *     *           |
+|                                                             * * * * * * * *           |
+|                                                               * * * *     *           |
+|                                                                                       |
+|                                                         * * * * * *                   |
+|                                                                 * * *                 |
+|                                                             * * * * * *               |
+|                                                                 * * *                 |
+|                                                         * * * * * *                   |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                       *       *       |
+|                   *   *                                                 * * *         |
+|           * * * * * *                                               * * * * * * *     |
+|               *   *                                                 *           *     |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 2
+The aquarium, sized 27/45 and currently in step 178, contains the following animals:
+The shrimp shrimp1 is 52 years old and has 13 food.
+The molly molly1 is 85 years old and has 13 food.
+The scalar scalar2 is 52 years old and has 3 food.
+The ocypode ocypode1 is 22 years old and has 10 food.
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 4
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                             * * * *     *             |
+|                                                           * * * * * * * *             |
+|                                                             * * * *     *             |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                           * * * * * *                 |
+|                                                                   * * *               |
+|                                                               * * * * * *             |
+|                                                                   * * *               |
+|                                                           * * * * * *                 |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                         *       *     |
+|                     *   *                                                 * * *       |
+|             * * * * * *                                               * * * * * * *   |
+|                 *   *                                                 *           *   |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 5
+How many steps do you want to take? 30
+scalar2 died at the age of 55 years because it ran out of food.
+|                                                                                       |
+|                                                                                       |
+| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|   *     * * * *                                                                       |
+|   * * * * * * * *                                                                     |
+|   *     * * * *                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                                                       |
+|                                                             *       *                 |
+| *   *                                                         * * *                   |
+|   * * * * * *                                             * * * * * * *               |
+|     *   *                                                 *           *               |
+\ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
+
+Main menu
+------------------------------
+1. Add an animal
+2. Print all animals
+3. Drop food into the aquarium
+4. Take a step forward
+5. Take several steps
+6. Exit
+What do you want to do? 6
+Bye bye
