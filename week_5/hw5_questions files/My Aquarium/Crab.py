@@ -3,8 +3,8 @@ import copy
 
 
 class Crab(Animal):
-    def __init__(self, name, age, food, width, height, x, y):
-        Animal.__init__(self, name, age, food, width, height, x, y)
+    def __init__(self, name, age, food, width, height, x, y, directionH):
+        Animal.__init__(self, name, age, food, width, height, x, y, directionH)
 
     def get_animal(self):
         return self
@@ -12,10 +12,6 @@ class Crab(Animal):
     def move(self):
         pass
 
-    def die(self):
-        pass
 
-
-royi = Crab("royi", 4, 0, 4, 4, 4, 4)
-royi.starvation()
-print(royi)
+royi = Crab("royi", 120, 120, 4, 4, 4, 4, 4)
+print(royi.die())

@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
-    def __init__(self, name, age, food, width, height, x, y):
+    def __init__(self, name, age, food, width, height, x, y, directionH):
         self.name = name
         self.age = age
         self.food = food
@@ -10,6 +10,7 @@ class Animal(ABC):
         self.height = height
         self.x = x
         self.y = y
+        self.directionH = directionH
 
     def __str__(self):
         return "The " + type(self).__name__ + " " + self.name + " is " + str(self.age) + " years old and has " + str(
@@ -35,12 +36,23 @@ class Animal(ABC):
             print(str(self.name) + " died at the age of " + str(self.age) + " years because it ran out of food .")
             return True
 
+    def get_directionH(self):
+        return self.directionH
+
+    def set_directionH(self, directionH):
+        self.directionH = directionH
+
+    def die(self):
+        if self.age == 120:
+            print(str(self.name) + " died in a good health.")
+            return True
+        return False
+
+
     @abstractmethod
     def get_animal(self):
         pass
+
     @abstractmethod
     def move(self):
-        pass
-    @abstractmethod
-    def die(self):
         pass
