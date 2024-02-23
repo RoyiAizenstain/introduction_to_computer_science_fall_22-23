@@ -127,8 +127,8 @@ The molly mymolly is 15 years old and has 8 food.
 \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ /
 
 myshrimp died at the age of 25 years because it ran out of food.
-mymolly died at the age of 23 years because it ran out of food.
 myscalar died at the age of 27 years because it ran out of food.
+mymolly died at the age of 23 years because it ran out of food.
 The aquarium, sized 25/40 and currently in step 128, contains the following animals:
 
 |                                                                             |

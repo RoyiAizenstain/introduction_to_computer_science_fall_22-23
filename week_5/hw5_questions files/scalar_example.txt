@@ -1,0 +1,23 @@
+## The Code ##
+scalar1 = Scalar('scalar1', 119, 12, 12, 0, 1)
+print(scalar1)
+print(repr(scalar1))
+scalar1.inc_age()
+scalar1.die()
+for _ in range(10):
+    scalar1.dec_food()
+scalar1.starvation()
+
+## The Output ##
+The scalar scalar1 is 119 years old and has 10 food.
+    * * * * * *
+  * * *
+* * * * * *
+  * * *
+    * * * * * *
+
+
+scalar1 died in a good health.
+scalar1 died at the age of 120 years because it ran out of food.
+
+## End Of Output ##
