@@ -1,8 +1,19 @@
 from abc import ABC, abstractmethod
+from Exceptions import *
 
 
 class Animal(ABC):
     def __init__(self, name, age, width, height, x, y, directionH):
+        if not isinstance(name, str) or name == "":
+            raise InvalidInputException
+        if not (0 <= age < 120):
+            raise InvalidInputException
+        if not isinstance(x, int) or x < 0:
+            raise InvalidInputException
+        if not isinstance(y, int) or y < 0:
+            raise InvalidInputException
+        if not (directionH == 0 or directionH == 1):
+            raise InvalidInputException
         self.name = name
         self.age = age
         self.food = 10
@@ -13,11 +24,18 @@ class Animal(ABC):
         self.directionH = directionH
 
     def __str__(self):
-        return "The " + type(self).__name__.lower() + " " + self.name + " is " + str(self.age) + " years old and has " + str(
+        return "The " + type(self).__name__.lower() + " " + self.name + " is " + str(
+            self.age) + " years old and has " + str(
             self.food) + " food."
 
     def __repr__(self):
-        return str(self.get_animal())
+        def str_animal(animal_list):  # need to change
+            animal_str = ""
+            for row in animal_list:
+                animal_str += " ".join(row) + "\n"
+            return animal_str
+
+        return str_animal(self.get_animal())
 
     def get_position(self):
         return self.x, self.y
@@ -28,7 +46,7 @@ class Animal(ABC):
     def add_food(self, amount):
         self.food += amount
 
-    def dec_food(self, food):
+    def dec_food(self):
         self.food -= 1
 
     def inc_age(self):
