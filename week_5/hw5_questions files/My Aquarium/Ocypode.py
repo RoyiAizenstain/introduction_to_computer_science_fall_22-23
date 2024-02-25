@@ -13,13 +13,3 @@ class Ocypode(Crab):
                    ["*", " ", " ", " ", " ", " ", "*"]]
 
         return ocypode
-
-
-scalar1 = Ocypode('scalar1', 119, 12, 12, 1)
-print(scalar1)
-print(repr(scalar1))
-scalar1.inc_age()
-scalar1.die()
-for _ in range(10):
-    scalar1.dec_food()
-scalar1.starvation()
