@@ -3,6 +3,7 @@ from Scalar import Scalar
 from Molly import Molly
 from Shrimp import Shrimp
 from Ocypode import Ocypode
+import copy
 
 
 def generate_new_board_list(width, height):
@@ -56,7 +57,6 @@ def generate_animal(name, age, x, y, directionH, directionV, animaltype):
 
 
 def update_position_if_out(main_corner, width, height, board):
-    update_corner = main_corner
     x = main_corner[0]
     y = main_corner[1]
     max_width = len(board[0])
@@ -72,6 +72,36 @@ def update_position_if_out(main_corner, width, height, board):
         all = y + height - max_height
         y = y - (all) - 1
     return x, y
+
+
+def update_position_if_fish(main_corner, height, board):
+    x = main_corner[0]
+    y = main_corner[1]
+    max_height = len(board)
+    if max_height - (y + height) <= height:
+        y = max_height - 5 - (height - 1) - 1
+    return x, y
+
+
+def is_empty_place(board, x, y):
+    if board[y][x] == "":
+        return True
+    else:
+        return False
+
+
+def is_available_place_for_list(lst, main_corner, board):
+    x = main_corner[0]
+    y = main_corner[1]
+    lst = lst
+    for row in lst:
+        for col in row:
+            if not is_empty_place(board, x, y):
+                return False
+            x += 1
+        x = main_corner[0]
+        y += 1
+    return True
 
 
 class Aquarium:
@@ -99,9 +129,6 @@ class Aquarium:
     def feed_all(self):
         for animal in self.animals:
             animal.add_food(10)
-        self.__insert_animal_to_board(Scalar("A", 4, 15, 8, 1, 1))
-        self.__insert_animal_to_board(Molly("A", 4, 1, 3, 0, 1))
-        self.__delete_animal_to_board(Molly("A", 4, 1, 3, 0, 1))
 
     def __insert_animal_to_board(self, animal):
         x = animal.x
@@ -117,7 +144,7 @@ class Aquarium:
             x = animal.x
             y += 1
 
-    def __delete_animal_to_board(self, animal):
+    def __delete_animal_from_board(self, animal):
         x = animal.x
         y = animal.y
         animal_list = animal.get_animal()
@@ -130,29 +157,49 @@ class Aquarium:
 
     def add_animal(self, name, age, x, y, directionH, directionV, animaltype):
         animal = generate_animal(name, age, x, y, directionH, directionV, animaltype)
-        main_corner = (x, y)
+        main_corner = [x, y]
         width = animal.width
         height = animal.height
-        animal.x, animal.y = update_position_if_out(main_corner, width, height, self.board)
+        main_corner[0], main_corner[1] = update_position_if_out(main_corner, width, height, self.board)
         if animaltype in ["shrimp", "ocypode"]:
-            animal.y = len(self.board) - 1 - animal.height
+            main_corner[1] = len(self.board) - 1 - animal.height
         if animaltype in ["molly", "scalar"]:
-            """need to complete"""
+            main_corner[0], main_corner[1] = update_position_if_fish(main_corner, height, self.board)
+        if not is_available_place_for_list(animal.get_animal(), main_corner, self.board):
+            raise NotAvailablePlace
+        animal.x = main_corner[0]
+        animal.y = main_corner[1]
         self.__insert_animal_to_board(animal)
         self.animals.append(animal)
         pass
 
     def __kill_animal(self, animal):
-        pass
+        if animal.starvation():
+            self.__delete_animal_from_board(animal)
+            self.animals.pop(self.animals.index(animal))
+        if animal.die():
+            self.__delete_animal_from_board(animal)
+            self.animals.pop(self.animals.index(animal))
 
     def next_step(self):
-        pass
+        self.step += 1
+        animals_temp = self.animals.copy()
+        for animal in animals_temp:
+            animal.move()
+            if self.step % 10 == 0:
+                animal.inc_age()
+                animal.dec_food()
+            self.__kill_animal(animal)
 
     def several_steps(self, steps):
         pass
 
 
 acc = Aquarium()
-acc.add_animal("r", 2, 1111, 10000, 0, 0, "shrimp")
-print(repr(acc))
-print(str(acc))
+acc.add_animal("r", 15, 1, 3, 1, 0, "shrimp")
+acc.add_animal("r", 119, 12, 12, 0, 0, "ocypode")
+acc.add_animal("r", 17, 30, 10, 1, 0, "scalar")
+acc.add_animal("r", 13, 1, 3, 0, 0, "molly")
+acc.add_animal("r", 13, 100, 100, 0, 0, "molly")
+acc.add_animal("r", 119, 16, 1, 0, 1, "scalar")
+acc.add_animal("b", 119, 16, 15, 0, 1, "scalar")
