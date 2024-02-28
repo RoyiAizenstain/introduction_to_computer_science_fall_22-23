@@ -136,10 +136,8 @@ class Aquarium:
         animal_list = animal.get_animal()
         for row in animal_list:
             for col in row:
-                if col[0] != " ":
-                    add_in_place(self.board, col, x, y)
-                else:
-                    add_in_place(self.board, " ", x, y)
+                if col != " ":
+                    add_in_place(self.board, "*", x, y)
                 x += 1
             x = animal.x
             y += 1
@@ -150,7 +148,7 @@ class Aquarium:
         animal_list = animal.get_animal()
         for row in animal_list:
             for col in row:
-                add_in_place(self.board, " ", x, y)
+                add_in_place(self.board, "", x, y)
                 x += 1
             x = animal.x
             y += 1
@@ -185,21 +183,33 @@ class Aquarium:
         self.step += 1
         animals_temp = self.animals.copy()
         for animal in animals_temp:
-            animal.move()
             if self.step % 10 == 0:
                 animal.inc_age()
                 animal.dec_food()
             self.__kill_animal(animal)
+        self.board = generate_new_board_list(self.aqua_width, self.aqua_height)
+        for animal in self.animals:
+            if animal.y == 3:
+                animal.set_directionV(0)
+            if animal.x == 1:
+                animal.set_directionH(1)
+            if animal.x + animal.width == self.aqua_width - 1:
+                animal.set_directionH(0)
+            animal.move()
+            self.__insert_animal_to_board(animal)
 
     def several_steps(self, steps):
         pass
 
 
 acc = Aquarium()
-acc.add_animal("r", 15, 1, 3, 1, 0, "shrimp")
-acc.add_animal("r", 119, 12, 12, 0, 0, "ocypode")
-acc.add_animal("r", 17, 30, 10, 1, 0, "scalar")
-acc.add_animal("r", 13, 1, 3, 0, 0, "molly")
-acc.add_animal("r", 13, 100, 100, 0, 0, "molly")
-acc.add_animal("r", 119, 16, 1, 0, 1, "scalar")
-acc.add_animal("b", 119, 16, 15, 0, 1, "scalar")
+acc.add_animal("r", 15, 1, 3, 0, 1, "shrimp")
+acc.add_animal("r", 1, 120, 0, 1, 1, "molly")
+#acc.add_animal("r", 17, 16, 10, 1, 1, "scalar")
+# acc.add_animal("r", 13, 9, 6, 1, 0, "molly")
+# acc.add_animal("r", 13, 100, 100, 0, 0, "molly")
+# acc.add_animal("r", 119, 16, 1, 1, 1, "scalar")
+# acc.add_animal("b", 119, 16, 15, 0, 0, "scalar")
+print(repr(acc))
+acc.next_step()
+print(repr(acc))
