@@ -105,7 +105,9 @@ def is_available_place_for_list(lst, main_corner, board):
 
 
 class Aquarium:
-    def __init__(self, aqua_width=40, aqua_height=25):
+    def __init__(self, aqua_width, aqua_height):
+        if not isinstance(aqua_width, int) or not isinstance(aqua_height, int):
+            raise InvalidInputException
         if aqua_height < 25:
             raise TooSmallAquariumSize
         if aqua_width < 40:
@@ -201,11 +203,13 @@ class Aquarium:
             self.__kill_animal(animal)
 
     def several_steps(self, steps):
+        for step in range(steps):
+            self.next_step()
         pass
 
 
-acc = Aquarium()
-#acc.add_animal("r", 15, 1, 100, 0, 1, "shrimp")
+acc = Aquarium(40, 25)
+# acc.add_animal("r", 15, 1, 100, 0, 1, "shrimp")
 acc.add_animal("r", 17, 100, 100, 1, 1, "scalar")
 # acc.add_animal("r", 13, 9, 6, 1, 0, "molly")
 # acc.add_animal("r", 13, 100, 100, 0, 0, "molly")
