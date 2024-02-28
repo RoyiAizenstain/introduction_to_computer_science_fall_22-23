@@ -190,6 +190,8 @@ class Aquarium:
                 animal.set_directionH(1)
             if animal.x + animal.width == self.aqua_width - 1:
                 animal.set_directionH(0)
+            if animal.y + animal.height == self.aqua_height - 5:
+                animal.set_directionV(1)
             animal.move()
             self.__insert_animal_to_board(animal)
         for animal in animals_temp:
@@ -203,13 +205,20 @@ class Aquarium:
 
 
 acc = Aquarium()
-acc.add_animal("r", 15, 1, 3, 0, 1, "shrimp")
-acc.add_animal("r", 1, 120, 0, 1, 1, "molly")
-#acc.add_animal("r", 17, 16, 10, 1, 1, "scalar")
+#acc.add_animal("r", 15, 1, 100, 0, 1, "shrimp")
+acc.add_animal("r", 17, 100, 100, 1, 1, "scalar")
 # acc.add_animal("r", 13, 9, 6, 1, 0, "molly")
 # acc.add_animal("r", 13, 100, 100, 0, 0, "molly")
-# acc.add_animal("r", 119, 16, 1, 1, 1, "scalar")
-# acc.add_animal("b", 119, 16, 15, 0, 0, "scalar")
+acc.add_animal("r", 119, 3, 1, 1, 1, "ocypode")
+acc.add_animal("b", 119, 10, 15, 0, 0, "shrimp")
+print(repr(acc))
+acc.next_step()
+print(repr(acc))
+acc.next_step()
+print(repr(acc))
+acc.next_step()
+print(repr(acc))
+acc.next_step()
 print(repr(acc))
 acc.next_step()
 print(repr(acc))
