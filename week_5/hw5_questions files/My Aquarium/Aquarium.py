@@ -182,11 +182,6 @@ class Aquarium:
     def next_step(self):
         self.step += 1
         animals_temp = self.animals.copy()
-        for animal in animals_temp:
-            if self.step % 10 == 0:
-                animal.inc_age()
-                animal.dec_food()
-            self.__kill_animal(animal)
         self.board = generate_new_board_list(self.aqua_width, self.aqua_height)
         for animal in self.animals:
             if animal.y == 3:
@@ -197,6 +192,11 @@ class Aquarium:
                 animal.set_directionH(0)
             animal.move()
             self.__insert_animal_to_board(animal)
+        for animal in animals_temp:
+            if self.step % 10 == 0:
+                animal.inc_age()
+                animal.dec_food()
+            self.__kill_animal(animal)
 
     def several_steps(self, steps):
         pass
