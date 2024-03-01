@@ -3,7 +3,6 @@ from Scalar import Scalar
 from Molly import Molly
 from Shrimp import Shrimp
 from Ocypode import Ocypode
-import copy
 
 
 def generate_new_board_list(width, height):
@@ -33,12 +32,19 @@ def add_in_place(board, char, x, y):
 
 def generate_board_str(board_list):
     board_str = ""
+    cnt1 = 0
     for row in board_list:
+        cnt = 0
+        cnt1 += 1
         for col in row:
+            cnt += 1
             if col == "":
                 board_str += "  "
             else:
-                board_str += col + " "
+                if cnt == len(row):
+                    board_str += col
+                else:
+                    board_str += col + " "
         board_str += "\n"
     return board_str
 
@@ -104,6 +110,10 @@ def is_available_place_for_list(lst, main_corner, board):
     return True
 
 
+def pos_x(animal):
+    return animal.x
+
+
 class Aquarium:
     def __init__(self, aqua_width, aqua_height):
         if not isinstance(aqua_width, int) or not isinstance(aqua_height, int):
@@ -120,9 +130,9 @@ class Aquarium:
 
     def __str__(self):
         aquarium_str = "The aquarium, sized " + str(self.aqua_height) + "/" + str(
-            self.aqua_width) + " and currently in " + str(self.step) + " step, contains the following animals:"
+            self.aqua_width) + " and currently in step " + str(self.step) + ", contains the following animals:\n"
         for animal in self.animals:
-            aquarium_str += "\n" + str(animal)
+            aquarium_str += str(animal) + "\n"
         return aquarium_str
 
     def __repr__(self):
@@ -171,7 +181,6 @@ class Aquarium:
         animal.y = main_corner[1]
         self.__insert_animal_to_board(animal)
         self.animals.append(animal)
-        pass
 
     def __kill_animal(self, animal):
         if animal.starvation():
@@ -185,6 +194,26 @@ class Aquarium:
         self.step += 1
         animals_temp = self.animals.copy()
         self.board = generate_new_board_list(self.aqua_width, self.aqua_height)
+        for animal in animals_temp:
+            """self.__kill_animal(animal)"""
+        crabs_temp = []
+        for animal in self.animals:
+            if type(animal) is Shrimp:
+                crabs_temp.append(animal)
+            if type(animal) is Ocypode:
+                crabs_temp.append(animal)
+        crabs_temp = sorted(crabs_temp, key=pos_x)
+        cnt = 0
+        for crab in crabs_temp:
+            if len(crabs_temp) == cnt + 1:
+                break
+            crab1 = crab
+            crab2 = crabs_temp[cnt + 1]
+            if pos_x(crab1) + 8 >= pos_x(crab2):
+                if crab1.get_directionH() == 1 and crab2.get_directionH() == 0:
+                    crab1.set_directionH(0)
+                    crab2.set_directionH(1)
+            cnt += 1
         for animal in self.animals:
             if animal.y == 3:
                 animal.set_directionV(0)
@@ -196,33 +225,13 @@ class Aquarium:
                 animal.set_directionV(1)
             animal.move()
             self.__insert_animal_to_board(animal)
-        for animal in animals_temp:
+        for animal in self.animals:
             if self.step % 10 == 0:
                 animal.inc_age()
                 animal.dec_food()
-            self.__kill_animal(animal)
 
     def several_steps(self, steps):
         for step in range(steps):
             self.next_step()
-        pass
 
 
-acc = Aquarium(40, 25)
-# acc.add_animal("r", 15, 1, 100, 0, 1, "shrimp")
-acc.add_animal("r", 17, 100, 100, 1, 1, "scalar")
-# acc.add_animal("r", 13, 9, 6, 1, 0, "molly")
-# acc.add_animal("r", 13, 100, 100, 0, 0, "molly")
-acc.add_animal("r", 119, 3, 1, 1, 1, "ocypode")
-acc.add_animal("b", 119, 10, 15, 0, 0, "shrimp")
-print(repr(acc))
-acc.next_step()
-print(repr(acc))
-acc.next_step()
-print(repr(acc))
-acc.next_step()
-print(repr(acc))
-acc.next_step()
-print(repr(acc))
-acc.next_step()
-print(repr(acc))
