@@ -22,7 +22,7 @@ def generate_new_board_list(width, height):
                 elif row == height - 1:
                     board[row].append("_")
                 else:
-                    board[row].append("")
+                    board[row].append(" ")
     return board
 
 
@@ -90,7 +90,7 @@ def update_position_if_fish(main_corner, height, board):
 
 
 def is_empty_place(board, x, y):
-    if board[y][x] == "":
+    if board[y][x] == " ":
         return True
     else:
         return False
@@ -195,7 +195,7 @@ class Aquarium:
         animals_temp = self.animals.copy()
         self.board = generate_new_board_list(self.aqua_width, self.aqua_height)
         for animal in animals_temp:
-            """self.__kill_animal(animal)"""
+            self.__kill_animal(animal)
         crabs_temp = []
         for animal in self.animals:
             if type(animal) is Shrimp:
@@ -233,5 +233,6 @@ class Aquarium:
     def several_steps(self, steps):
         for step in range(steps):
             self.next_step()
+
 
 
