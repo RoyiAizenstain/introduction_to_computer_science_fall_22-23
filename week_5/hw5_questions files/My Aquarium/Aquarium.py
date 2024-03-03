@@ -234,5 +234,3 @@ class Aquarium:
         for step in range(steps):
             self.next_step()
 
-
-
