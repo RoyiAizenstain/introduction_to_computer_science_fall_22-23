@@ -1,0 +1,165 @@
+### Example BinaryTree 1:
+### Code starts here:
+bin_tree_1 = BinaryTree()
+n1 = TreeNode(6, 6)
+n2 = TreeNode(12, 12)
+n3 = TreeNode(14, 14)
+n4 = TreeNode(41, 41)
+n5 = TreeNode(53, 53)
+n6 = TreeNode(66, 66)
+n7 = TreeNode(33, 33)
+n1.left = n2
+n1.right = n3
+n2.left = n6
+n2.right = n4
+n3.left = None
+n3.right = n7
+n4.left = None
+n4.right = None
+n5.left = None
+n5.right = None
+n6.left = None
+n6.right = None
+n7.left = None
+n7.right = n5
+bin_tree_1.root = n1
+
+
+print(bin_tree_1)
+print(f"All the root-to-leaf pathways recursively are: {bin_tree_1.root_to_leaf_path_rec()}")
+print(f"All the root-to-leaf pathways iteratively are: {bin_tree_1.root_to_leaf_path_iter()}")
+print(f"The neighbors of node {n5.val} are:")
+bin_tree_1.print_all_neighbors(n5)
+print(f"is the tree Symmetric: {bin_tree_1.is_symmetric_tree()}")
+
+
+### Code ends here
+### Example BinaryTree 1 Output starts here
+                 6                 
+         _______/ \__              
+       12            14            
+    __/  \__        /  \__         
+  66        41     #      33       
+ /  \      /  \          /  \__    
+#    #    #    #        #      53  
+                              /  \ 
+                             #    #
+
+All the root-to-leaf pathways recursively are: [[6, 12, 66], [6, 12, 41], [6, 14, 33, 53]]
+All the root-to-leaf pathways iteratively are: [[6, 12, 66], [6, 12, 41], [6, 14, 33, 53]]
+The neighbors of node 53 are:
+
+is the tree Symmetric: False
+
+Process finished with exit code 0
+### Example BinaryTree 1 Output ends here
+
+
+### Example BinaryTree 2:
+### Code starts here:
+bin_tree_2 = BinaryTree()
+n1 = TreeNode(32, 32)
+n2 = TreeNode(10, 10)
+n3 = TreeNode(15, 15)
+n4 = TreeNode(85, 85)
+n5 = TreeNode(53, 53)
+n6 = TreeNode(97, 97)
+n7 = TreeNode(24, 24)
+n1.left = n2
+n1.right = n3
+n2.left = n6
+n2.right = None
+n3.left = None
+n3.right = n7
+n4.left = None
+n4.right = None
+n5.left = None
+n5.right = None
+n6.left = n4
+n6.right = None
+n7.left = None
+n7.right = n5
+bin_tree_2.root = n1
+
+
+print(bin_tree_2)
+print(f"All the root-to-leaf pathways recursively are: {bin_tree_2.root_to_leaf_path_rec()}")
+print(f"All the root-to-leaf pathways iteratively are: {bin_tree_2.root_to_leaf_path_iter()}")
+print(f"The neighbors of node {n7.val} are:")
+bin_tree_2.print_all_neighbors(n7)
+print(f"is the tree Symmetric: {bin_tree_2.is_symmetric_tree()}")
+
+### Code ends here
+
+### Example BinaryTree 2 Output starts here
+                 32                 
+              __/  \__              
+            10        15            
+         __/  \      /  \__         
+       97      #    #      24       
+    __/  \                /  \__    
+  85      #              #      53  
+ /  \                          /  \ 
+#    #                        #    #
+
+All the root-to-leaf pathways recursively are: [[32, 10, 97, 85], [32, 15, 24, 53]]
+All the root-to-leaf pathways iteratively are: [[32, 10, 97, 85], [32, 15, 24, 53]]
+The neighbors of node 24 are:
+97 
+is the tree Symmetric: True
+
+Process finished with exit code 0
+### Example BinaryTree 2 Output ends here
+
+### Example BinaryTree 3:
+### Code starts here:
+bin_tree_3 = BinaryTree()
+n1 = TreeNode(32, 32)
+n2 = TreeNode(10, 10)
+n3 = TreeNode(15, 15)
+n4 = TreeNode(85, 85)
+n5 = TreeNode(53, 53)
+n6 = TreeNode(97, 97)
+n7 = TreeNode(24, 24)
+n1.left = n2
+n1.right = n3
+n2.left = n6
+n2.right = n4
+n3.left = n5
+n3.right = n7
+n4.left = None
+n4.right = None
+n5.left = None
+n5.right = None
+n6.left = None
+n6.right = None
+n7.left = None
+n7.right = None
+bin_tree_3.root = n1
+
+
+print(bin_tree_3)
+print(f"All the root-to-leaf pathways recursively are: {bin_tree_3.root_to_leaf_path_rec()}")
+print(f"All the root-to-leaf pathways iteratively are: {bin_tree_3.root_to_leaf_path_iter()}")
+print(f"The neighbors of node {n7.val} are:")
+bin_tree_3.print_all_neighbors(n7)
+print(f"is the tree Symmetric: {bin_tree_3.is_symmetric_tree()}")
+### Code ends here
+
+### Example BinaryTree 2 Output starts here
+                 32                 
+         _______/  \_______         
+       10                  15       
+    __/  \__            __/  \__    
+  97        85        53        24  
+ /  \      /  \      /  \      /  \ 
+#    #    #    #    #    #    #    #
+
+All the root-to-leaf pathways recursively are: [[32, 10, 97], [32, 10, 85], [32, 15, 53], [32, 15, 24]]
+All the root-to-leaf pathways iteratively are: [[32, 10, 97], [32, 10, 85], [32, 15, 53], [32, 15, 24]]
+The neighbors of node 24 are:
+97 85 
+is the tree Symmetric: True
+
+Process finished with exit code 0
+### Example BinaryTree 2 Output ends here

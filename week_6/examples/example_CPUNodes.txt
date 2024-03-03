@@ -1,0 +1,29 @@
+### CPUNodes - The Code starts here
+cpu_nodes = CPUNodes(capacity=30,nodes_number=6)
+print(f"The cpu_nodes representation should look like this: \n{cpu_nodes}")
+cpu_nodes.occupy_available_cpu_capacity(15)
+print(f"The cpu_nodes representation after occupying {15} CPU's: \n{cpu_nodes}")
+print(f"The total CPU's num available at cpu_nodes now {cpu_nodes.get_available_cpu_capacity()}")
+cpu_nodes.free_occupied_cpu_capacity(3)
+cpu_nodes.free_occupied_cpu_capacity(4)
+print(f"The total CPU's num available at cpu_nodes now {cpu_nodes.get_available_cpu_capacity()}")
+print(cpu_nodes)
+cpu_nodes.free_occupied_cpu_capacity(1)
+print(cpu_nodes)
+cpu_nodes.occupy_available_cpu_capacity(15)
+print(cpu_nodes)
+### CPUNodes - The Code ends here
+
+### CPUNodes - The Output starts here:
+The cpu_nodes representation should look like this: 
+[5, 5] ->[5, 5] ->[5, 5] ->[5, 5] ->[5, 5] ->[5, 5] 
+The cpu_nodes representation after occupying 15 CPU's: 
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+The total CPU's num available at cpu_nodes now 15
+The total CPU's num available at cpu_nodes now 22
+[5, 5] ->[5, 2] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+[5, 5] ->[5, 3] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 3] ->[5, 5] 
+
+Process finished with exit code 0
+### CPUNodes - The Output ends here

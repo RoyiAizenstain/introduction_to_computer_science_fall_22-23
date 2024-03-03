@@ -1,0 +1,291 @@
+### JobRequestSystem - The Code starts here
+print("Welcome to JobRequestSystem: \n"
+      "This system is being initialized....\n")
+nodes_num = 6
+system_capacity = 30
+job_requests = [("first job", 3, 5),
+                ("second job", 2, 5),
+                ("third job", 5, 5),
+                ("forth job", 4, 16),
+                ("fifth job", 1, 3),
+                ("sixth job", 3, 5),
+                ("seventh job", 6, 12),
+                ("eight", 2, 4),
+                ("nine", 9, 3),
+                ("extra", 6, 1),
+                ("nine", 1, 15),
+                ("",), ]
+job_req_sys = JobRequestSystem(nodes_num, system_capacity)
+for element in job_requests:
+    job_instance = job_req_sys.request_new_job(*element)  # (*request_job_window())
+    print()
+    print("*" * 10 + "Requesting the job:" + "*" * 10)
+    print(job_instance)
+    job_req_sys.request_job_resources(job_instance)
+    print("Nodes situation:")
+    print(job_req_sys.get_nodes_system_capacity())
+def print_curr_situtaion(jrs):
+    print("\nCurrent situation:") 
+    print("#" * 38)
+    print("Initialized jobs:")
+    print(jrs.get_initialized_jobs())
+    print("#" * 38)
+    print("Waiting jobs:")
+    print(jrs.get_waiting_jobs())
+    print("#" * 38)
+    print("Nodes situation:")
+    print(jrs.get_nodes_system_capacity())
+    
+print("\n"+ "%"*25 + "-"* 10 + "%" *25+ "\n")
+print_curr_situtaion(job_req_sys)
+print("\n"+ "%"*25 + "-"* 10 + "%" *25+ "\n")
+print(f"The Job with id: {job_instance.get_id()} is being terminated....")
+print(job_req_sys.terminate_job(job_instance.get_id()))
+print_curr_situtaion(job_req_sys)
+print("\n"+ "%"*25 + "-"* 10 + "%" *25+ "\n")
+print("A Job will be executed soon.......")
+job_req_sys.execute_job()
+print_curr_situtaion(job_req_sys)
+print("\n"+ "%"*25 + "-"* 10 + "%" *25+ "\n")
+print("Total resources required for Waiting Jobs :\n"
+      "Calculating.....")
+print(job_req_sys.total_waiting_requested_job_resources())
+print_curr_situtaion(job_req_sys)
+print("\n"+ "%"*25 + "-"* 10 + "%" *25+ "\n")
+job_instance = job_req_sys.request_new_job("Non valid", 1, 35)  # (*request_job_window())
+print("\n"+ "%"*25 + "-"* 10 + "%" *25+ "\n")
+job_req_sys.request_job_resources(job_instance)
+### JobRequestSystem - The Code ends here
+
+### JobRequestSystem - The Output starts here
+Welcome to JobRequestSystem: 
+This system is being initialized....
+
+
+**********Requesting the job:**********
+ID: 0, Rank: 3, Resources: 5
+Requested resources for Job 0 have been initialized.
+Nodes situation:
+[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] ->[5, 5] ->[5, 5] 
+
+**********Requesting the job:**********
+ID: 1, Rank: 2, Resources: 5
+Requested resources for Job 1 have been initialized.
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] ->[5, 5] 
+
+**********Requesting the job:**********
+ID: 2, Rank: 5, Resources: 5
+Requested resources for Job 2 have been initialized.
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+
+**********Requesting the job:**********
+ID: 3, Rank: 4, Resources: 16
+Requested resources for Job 3 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+
+**********Requesting the job:**********
+ID: 4, Rank: 1, Resources: 3
+Requested resources for Job 4 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+
+**********Requesting the job:**********
+ID: 5, Rank: 3, Resources: 5
+Requested resources for Job 5 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 5] ->[5, 5] ->[5, 5] 
+
+**********Requesting the job:**********
+ID: 6, Rank: 6, Resources: 12
+Requested resources for Job 6 have been initialized.
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 3] 
+
+**********Requesting the job:**********
+ID: 7, Rank: 2, Resources: 4
+Requested resources for Job 7 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 3] 
+
+**********Requesting the job:**********
+ID: 8, Rank: 9, Resources: 3
+Requested resources for Job 8 have been initialized.
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+**********Requesting the job:**********
+ID: 9, Rank: 6, Resources: 1
+Requested resources for Job 9 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+**********Requesting the job:**********
+ID: 10, Rank: 1, Resources: 15
+Requested resources for Job 10 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+**********Requesting the job:**********
+ID: 11, Rank: 1, Resources: 1
+Requested resources for Job 11 must wait for available resources.
+Consider terminating the current request and trying lower resources
+Meanwhile you will be waiting for available resources
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%----------%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Current situation:
+######################################
+Initialized jobs:
+FirstIn <- ID: 0, Rank: 3, Resources: 5 | 
+ID: 1, Rank: 2, Resources: 5 | 
+ID: 2, Rank: 5, Resources: 5 | 
+ID: 6, Rank: 6, Resources: 12 | 
+ID: 8, Rank: 9, Resources: 3 | 
+<-LastIn
+######################################
+Waiting jobs:
+top->ID: 9, Rank: 6, Resources: 1 | 
+____________________________
+ID: 3, Rank: 4, Resources: 16 | 
+_____________________________
+ID: 5, Rank: 3, Resources: 5 | 
+____________________________
+ID: 7, Rank: 2, Resources: 4 | 
+____________________________
+ID: 4, Rank: 1, Resources: 3 | 
+____________________________
+ID: 10, Rank: 1, Resources: 15 | 
+______________________________
+ID: 11, Rank: 1, Resources: 1 | 
+_____________________________
+|
+######################################
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%----------%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The Job with id: 11 is being terminated....
+ID: 11, Rank: 1, Resources: 1
+
+Current situation:
+######################################
+Initialized jobs:
+FirstIn <- ID: 0, Rank: 3, Resources: 5 | 
+ID: 1, Rank: 2, Resources: 5 | 
+ID: 2, Rank: 5, Resources: 5 | 
+ID: 6, Rank: 6, Resources: 12 | 
+ID: 8, Rank: 9, Resources: 3 | 
+<-LastIn
+######################################
+Waiting jobs:
+top->ID: 9, Rank: 6, Resources: 1 | 
+____________________________
+ID: 3, Rank: 4, Resources: 16 | 
+_____________________________
+ID: 5, Rank: 3, Resources: 5 | 
+____________________________
+ID: 7, Rank: 2, Resources: 4 | 
+____________________________
+ID: 4, Rank: 1, Resources: 3 | 
+____________________________
+ID: 10, Rank: 1, Resources: 15 | 
+______________________________
+|
+######################################
+Nodes situation:
+[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%----------%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A Job will be executed soon.......
+The current job with the id: 0 is being executed....
+The Job with the id 0 has finished executing successfully.
+Requested resources for Job 9 have been initialized.
+
+Current situation:
+######################################
+Initialized jobs:
+FirstIn <- ID: 1, Rank: 2, Resources: 5 | 
+ID: 2, Rank: 5, Resources: 5 | 
+ID: 6, Rank: 6, Resources: 12 | 
+ID: 8, Rank: 9, Resources: 3 | 
+ID: 9, Rank: 6, Resources: 1 | 
+<-LastIn
+######################################
+Waiting jobs:
+top->ID: 3, Rank: 4, Resources: 16 | 
+_____________________________
+ID: 5, Rank: 3, Resources: 5 | 
+____________________________
+ID: 7, Rank: 2, Resources: 4 | 
+____________________________
+ID: 4, Rank: 1, Resources: 3 | 
+____________________________
+ID: 10, Rank: 1, Resources: 15 | 
+______________________________
+|
+######################################
+Nodes situation:
+[5, 4] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%----------%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Total resources required for Waiting Jobs :
+Calculating.....
+43
+
+Current situation:
+######################################
+Initialized jobs:
+FirstIn <- ID: 1, Rank: 2, Resources: 5 | 
+ID: 2, Rank: 5, Resources: 5 | 
+ID: 6, Rank: 6, Resources: 12 | 
+ID: 8, Rank: 9, Resources: 3 | 
+ID: 9, Rank: 6, Resources: 1 | 
+<-LastIn
+######################################
+Waiting jobs:
+top->ID: 3, Rank: 4, Resources: 16 | 
+_____________________________
+ID: 5, Rank: 3, Resources: 5 | 
+____________________________
+ID: 7, Rank: 2, Resources: 4 | 
+____________________________
+ID: 4, Rank: 1, Resources: 3 | 
+____________________________
+ID: 10, Rank: 1, Resources: 15 | 
+______________________________
+|
+######################################
+Nodes situation:
+[5, 4] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] ->[5, 0] 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%----------%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Job's requested resources exceeds the maximal number of cpu
+
+%%%%%%%%%%%%%%%%%%%%%%%%%----------%%%%%%%%%%%%%%%%%%%%%%%%%
+
+'NoneType' object has no attribute 'get_job_requested_resources'
+
+Process finished with exit code 0
+### JobRequestSystem - The Output ends here

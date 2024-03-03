@@ -1,0 +1,34 @@
+### Job - The Code starts here:
+job_1 = Job(job_description="first job example", job_rank=1, job_request_resources=2)
+job_2 = Job(job_description="another job example", job_rank=10, job_request_resources=5)
+job_3 = Job(job_description="third example", job_rank=5, job_request_resources=1)
+job_list = [job_1, job_2, job_3]
+for item in job_list:
+    print(item)
+for job in job_list:
+    print(f"Current Job ID: {job.get_id()}")
+    print(f" requested resources before updates: {job.get_job_requested_resources()}")
+    job.set_job_requested_resources(3)
+    print(f" requested resources after updates: {job.get_job_requested_resources()}")
+
+
+### Job - The Code ends here
+
+
+
+### Job - The Output starts here:
+ID: 0, Rank: 1, Resources: 2
+ID: 1, Rank: 10, Resources: 5
+ID: 2, Rank: 5, Resources: 1
+Current Job ID: 0
+ requested resources before updates: 2
+ requested resources after updates: 3
+Current Job ID: 1
+ requested resources before updates: 5
+ requested resources after updates: 3
+Current Job ID: 2
+ requested resources before updates: 1
+ requested resources after updates: 3
+
+Process finished with exit code 0
+### Job - The Output ends here
