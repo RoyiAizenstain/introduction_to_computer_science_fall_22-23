@@ -6,7 +6,7 @@ class Animal(ABC):
     def __init__(self, name, age, width, height, x, y, directionH):
         if not isinstance(name, str) or name == "":
             raise InvalidInputException
-        if not (0 <= age < 120):
+        if not isinstance(age, int) or not (0 <= age < 120):
             raise InvalidInputException
         if not isinstance(x, int) or x < 0:
             raise InvalidInputException
