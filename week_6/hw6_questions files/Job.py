@@ -24,44 +24,41 @@ class Job:
         self.__job_requested_resources = job_request_resources
 
     def get_rank(self):
-        pass
+        return self.__rank
 
     def get_description(self):
-        pass
+        return self.__description
 
     def get_id(self):
-        pass
+        return self.__job_id
 
     def set_description(self, new_description):
-        pass
+        if not isinstance(new_description, str):
+            raise TypeError("new_description should be string.")
+        self.__description = new_description
 
     def set_rank(self, new_rank):
-        pass
+        if not isinstance(new_rank, int):
+            raise TypeError("new_rank should be int.")
+        if not new_rank > 0:
+            raise ValueError("new_rank should be greater then 0.")
+        self.__rank = new_rank
 
     def set_job_requested_resources(self, new_job_requested_resources):
-        pass
+        if not isinstance(new_job_requested_resources, int):
+            raise TypeError("job_request_resources should be int.")
+        if not new_job_requested_resources > 0:
+            raise ValueError("job_request_resources should be greater then 0.")
+        self.__job_requested_resources = new_job_requested_resources
 
     def get_job_requested_resources(self):
-        pass
+        return self.__job_requested_resources
 
     def __repr__(self):
         return f"ID: {self.__job_id}, Rank: {self.__rank}, Resources: {self.__job_requested_resources}"
 
     def __eq__(self, other):
-        pass
+        return self.__rank == other.__rank
 
     def __lt__(self, other):
-        pass
-
-
-job_1 = Job(job_description="first job example", job_rank=1, job_request_resources=2)
-job_2 = Job(job_description="another job example", job_rank=10, job_request_resources=5)
-job_3 = Job(job_description="third example", job_rank=5, job_request_resources=1)
-job_list = [job_1, job_2, job_3]
-for item in job_list:
-    print(item)
-for job in job_list:
-    print(f"Current Job ID: {job.get_id()}")
-    print(f" requested resources before updates: {job.get_job_requested_resources()}")
-    job.set_job_requested_resources(3)
-    print(f" requested resources after updates: {job.get_job_requested_resources()}")
+        return self.__rank < other.__rank
